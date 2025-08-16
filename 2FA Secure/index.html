@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2FA Login Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Secure Login</h2>
+
+    <div id="loginStep">
+      <input type="text" id="username" placeholder="Username"><br>
+      <input type="password" id="password" placeholder="Password"><br>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="otpStep" class="hidden">
+      <p>Enter the 6-digit code sent to your device:</p>
+      <input type="text" id="otp" maxlength="6" placeholder="123456"><br>
+      <button onclick="verifyOTP()">Verify</button>
+    </div>
+
+    <div id="successStep" class="hidden">
+      <p class="success">✅ Login Successful! Welcome!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
